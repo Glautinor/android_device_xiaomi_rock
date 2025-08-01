@@ -44,7 +44,7 @@ ro.sys.usb.bicr=no
 ro.sys.usb.charging.only=yes
 
 # SystemUI
-persist.sysui.disableBlur=true
+persist.sysui.disableBlur=false
 
 # Project Infinity X
 ro.product.marketname=Redmi 11 Prime
