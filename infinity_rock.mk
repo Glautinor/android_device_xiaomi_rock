@@ -13,19 +13,29 @@ PRODUCT_PACKAGES += \
     GmsConfigOverlayPhotos \
     Gmail2 \
     Photos \
-    FilesGoogle \
-    Maps \
-    RecorderPrebuilt
+    FilesPrebuilt \
+    DocumentsUIGoogle \
+    StorageManagerGoogle \
+    GoogleFilesOverlay \
+    RecorderPrebuilt \
+    Maps
 
 # RecorderPrebuilt
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/RecorderPrebuilt/permissions/com.google.android.apps.recorder.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.google.android.apps.recorder.xml \
-    $(LOCAL_PATH)/RecorderPrebuilt/sysconfig/pixel_experience_2017.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/pixel_experience_2017.xml
+    $(LOCAL_PATH)/configs/permissions/com.google.android.apps.recorder.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.google.android.apps.recorder.xml \
+    $(LOCAL_PATH)/configs/sysconfig/pixel_experience_2017.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/pixel_experience_2017.xml
 
-# ProjectInfinityX Vanilla
-#WITH_GAPPS := false
-#TARGET_SHIPS_GOOGLE_DIALER := false
-#TARGET_SHIPS_FULL_GAPPS := false
+# StorageManagerGoogle
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/permissions/com.google.android.storagemanager.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.google.android.storagemanager.xml
+
+# FilesPrebuilt
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/permissions/com.google.android.apps.nbu.files.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.google.android.apps.nbu.files.xml
+
+# DocumentsUIGoogle
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/permissions/com.google.android.documentsui.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.google.android.documentsui.xml
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
