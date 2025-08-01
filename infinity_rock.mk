@@ -10,20 +10,21 @@ TARGET_SHIPS_GOOGLE_DIALER := true
 TARGET_SHIPS_FULL_GAPPS := false
 
 PRODUCT_PACKAGES += \
-    GmsConfigOverlayPhotos \
+    GmsConfigOverlayPhoto \
     Gmail2 \
-    Photos \
+    Photo \
+    Google \
     FilesPrebuilt \
     DocumentsUIGoogle \
-    StorageManagerGoogle \
-    GoogleFilesOverlay \
-    RecorderPrebuilt \
-    Maps
+    PixelDocumentsUIGoogleOverlay \
+    StorageManagerGoogle
+#    GoogleFilesOverlay \
+#    RecorderPrebuilt \
 
 # RecorderPrebuilt
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/permissions/com.google.android.apps.recorder.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.google.android.apps.recorder.xml \
-    $(LOCAL_PATH)/configs/sysconfig/pixel_experience_2017.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/pixel_experience_2017.xml
+#PRODUCT_COPY_FILES += \
+#    $(LOCAL_PATH)/configs/permissions/com.google.android.apps.recorder.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.google.android.apps.recorder.xml \
+#    $(LOCAL_PATH)/configs/sysconfig/pixel_experience_2017.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/pixel_experience_2017.xml
 
 # StorageManagerGoogle
 PRODUCT_COPY_FILES += \
