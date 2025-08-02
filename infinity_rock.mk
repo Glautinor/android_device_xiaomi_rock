@@ -12,19 +12,19 @@ TARGET_SHIPS_FULL_GAPPS := false
 PRODUCT_PACKAGES += \
     GmsConfigOverlayPhoto \
     Gmail2 \
-    Photo \
-    Google \
+    Maps \
+    Photos \
+    Velvet \
     FilesPrebuilt \
     DocumentsUIGoogle \
     PixelDocumentsUIGoogleOverlay \
-    StorageManagerGoogle
-#    GoogleFilesOverlay \
-#    RecorderPrebuilt \
+    StorageManagerGoogle \
+    RecorderPrebuilt
 
 # RecorderPrebuilt
-#PRODUCT_COPY_FILES += \
-#    $(LOCAL_PATH)/configs/permissions/com.google.android.apps.recorder.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.google.android.apps.recorder.xml \
-#    $(LOCAL_PATH)/configs/sysconfig/pixel_experience_2017.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/pixel_experience_2017.xml
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/permissions/com.google.android.apps.recorder.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.google.android.apps.recorder.xml \
+    $(LOCAL_PATH)/configs/sysconfig/pixel_experience_2017.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/pixel_experience_2017.xml
 
 # StorageManagerGoogle
 PRODUCT_COPY_FILES += \
@@ -72,4 +72,3 @@ TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_SUPPORTS_BLUR := true
 TARGET_HAS_UDFPS := false
 USE_MOTO_CALCULATOR := true
-
