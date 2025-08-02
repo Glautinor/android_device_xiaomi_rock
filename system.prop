@@ -44,4 +44,4 @@ ro.sys.usb.bicr=no
 ro.sys.usb.charging.only=yes
 
 # SystemUI
-persist.sysui.disableBlur=true
+persist.sysui.disableBlur=false
